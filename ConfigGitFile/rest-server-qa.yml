@@ -1,6 +1,6 @@
 spring:
   application:
-    name: movie-store
+    name: rest-server
 
 server:
   port: 7777
