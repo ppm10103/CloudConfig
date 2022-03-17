@@ -1,0 +1,12 @@
+#client
+http://localhost:8083/client/server_response
+http://localhost:8083/client/client_message
+
+#server
+http://localhost:49808/rest/server_message
+
+#Eureka console
+http://localhost:9999/
+
+#gateway
+http://localhost:8080/rest-server/server_message

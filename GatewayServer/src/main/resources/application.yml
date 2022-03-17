@@ -14,12 +14,16 @@ spring:
     name: gateway-server
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
       routes:
-        - id: movie-store
-          uri: lb://movie-store
+        - id: rest-server
+          uri: lb://rest-server
           predicates:
-            - Path=/movie/**
-        - id: book-store
-          uri: lb://book-store
-          predicates:
-            - Path=/book/**
+            - Path=/rest/**
+#        - id: book-store
+#          uri: lb://book-store
+#          predicates:
+#            - Path=/book/**

@@ -1,11 +1,11 @@
 spring:
   application:
     name: register-server
-
 server:
   port: 9999
-
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/

@@ -7,5 +7,6 @@ spring:
       server:
         git:
           uri: https://github.com/ppm10103/CloudConfig.git
+          search-paths: ConfigGitFile
           clone-on-start: true
           skip-ssl-validation: true

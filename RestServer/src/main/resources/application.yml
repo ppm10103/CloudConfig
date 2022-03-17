@@ -1,0 +1,30 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:9999/eureka}
+  instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: rest-server
+  profiles:
+    active: development
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: rest-server
+      profile: development
+      name: rest-server
+      uri: http://localhost:8888 #8888 is config server
+      label: main
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
